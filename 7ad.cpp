@@ -25,12 +25,12 @@ bool IsPrime(int number){
 int main() {
     std::vector<int> arrvec;
     arrvec = {1, 2, 3, 4, 5, 6, 7, 8, 9, 24234, 10, 1, 43, 432, 43242};
-    //Чтение массива
+    // Чтение массива
     std::cout << "Before: " << std::endl;
     for (int i : arrvec)
         std::cout << i << std::endl;
 
-    //изменение массива
+    // Изменение массива
     for (int i = 0; i < arrvec.size() ; ++i)
     {
         if(IsPrime(arrvec[i]))
@@ -46,7 +46,7 @@ int main() {
         }
     }
 
-    //чтение массива
+    // Чтение массива
     std::cout << "After:" << std::endl;
     for (int i = 0; i < arrvec.size() ; ++i)
         std::cout << arrvec[i] << std::endl;
