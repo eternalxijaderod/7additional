@@ -21,12 +21,16 @@ bool IsPrime(int number){
     }
     return true;
 }
+
 int main() {
     std::vector<int> arrvec;
     arrvec = {1, 2, 3, 4, 5, 6, 7, 8, 9, 24234, 10, 1, 43, 432, 43242};
+    //Чтение массива
     std::cout << "Before: " << std::endl;
     for (int i : arrvec)
         std::cout << i << std::endl;
+
+    //изменение массива
     for (int i = 0; i < arrvec.size() ; ++i)
     {
         if(IsPrime(arrvec[i]))
@@ -36,13 +40,16 @@ int main() {
         }
         else if(SumOfDigits(arrvec[i]) == 15)
         {
-            std::cout << "Summ of digit is 15" << std::endl;
+            std::cout << "Sum of digit is 15!" << std::endl;
             arrvec.insert(arrvec.begin() + i, arrvec[i]);
             i++;
         }
     }
+
+    //чтение массива
     std::cout << "After:" << std::endl;
     for (int i = 0; i < arrvec.size() ; ++i)
         std::cout << arrvec[i] << std::endl;
+
     return 0;
 }
